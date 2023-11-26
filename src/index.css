@@ -1,13 +1,95 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Rubik', sans-serif;
+  /* color: #252525; */
+  font-weight: 400;
+  background-color: #d9ccc3;
+  /* border-bottom: 1.6rem solid #c25e67;
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 4rem; */
+}
+
+.todo-wrapper {
+  margin-bottom: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  background: #d9ccc3;
+  padding: 40px;
+  margin: 0;
+  color: #2b282b;
+  text-align: center;
+}
+
+.emphasis {
+  font-family: sans-serif;
+}
+
+.list-group-item {
+  font-family: megrim, fantasy;
+  font-size: 2em;
+  padding: 12px;
+  background-color: #ccbcad;
+}
+
+input[type="checkbox"] {
+  margin-top: 11px;
+  width: 7mm;
+  height: 7mm;
+  box-shadow: none !important;
+  border: 0.1mm solid #9a4505;
+}
+input[type="checkbox"]:checked {
+  background-color: #9a4505;
+  border-color: #9a4505;
+  box-shadow: none !important;
+  color: white;
+}
+
+.done-true {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+.add-input {
+  width: 50%;
+  height: 20px;
+  float: left;
+  border: none;
+  padding: 40px 0;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  text-indent: 55px;
+}
+
+.add-btn {
+  width: 20%;
+  border: none;
+  background: #9a4505;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  height: 80px;
+  color: #1b1b1b;
+}
+
+.delete-btn {
+  width: 30%;
+  border: none;
+  height: 80px;
+  background: #501e1f;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  color: #e1e1e1;
 }
