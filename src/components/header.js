@@ -1,8 +1,10 @@
-import './logo.css';
+import './header.css';
 
 function Header() {
     return (
-        <div></div>
+        <header>
+            <h1>The best todos tracker</h1>
+        </header>
     );
 }
 

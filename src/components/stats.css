@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.form-select {
+  box-shadow: none !important;
+}
+.form-select:focus {
+    border-color: #ced4da;
+}
+
+p {
+    font-weight: 400;
+  background-color: #767962;
+  color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 30px;
+  padding: 10px;
+}
