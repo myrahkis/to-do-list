@@ -1,26 +1,45 @@
 import "./list.css";
 
+const todos = [
+  {
+    id: 1,
+    desc: "test test test",
+    done: true,
+  },
+  {
+    id: 2,
+    desc: "test test test test test test",
+    done: true,
+  },
+  {
+    id: 3,
+    desc: "test test test",
+    done: false,
+  },
+];
+
 function List() {
-  const done = false;
   return (
     <div className="container">
       <div className="wrapper">
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">
-            <input className="form-check-input me-1" type="checkbox"></input>
-            <span className="done-true">Test test test</span>
-          </li>
-          <li className="list-group-item">
-            <input className="form-check-input me-1" type="checkbox"></input>
-            <span className="done-true">Test test test Test test test</span>
-          </li>
-          <li className="list-group-item">
-            <input className="form-check-input me-1" type="checkbox"></input>
-            <span className="done-true">Test test test</span>
-          </li>
+          {todos.map((todo) => (
+            <Todo todo={todo} key={todo.id} />
+          ))}
         </ul>
       </div>
     </div>
+  );
+}
+
+function Todo({ todo }) {
+  return (
+    <li className="list-group-item">
+      <input className="form-check-input me-1" type="checkbox"></input>
+      <span className={todo.done ? 'done-true' : ''}>
+        {todo.desc}
+      </span>
+    </li>
   );
 }
 

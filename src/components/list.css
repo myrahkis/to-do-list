@@ -10,7 +10,7 @@
 }
 
 span {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 input[type="checkbox"] {
@@ -52,7 +52,7 @@ input[type="checkbox"]:focus {
   max-width: 200px;
 }
 
-/* .done-true {
+.done-true {
   text-decoration: line-through;
   opacity: 0.5;
-} */
+}
