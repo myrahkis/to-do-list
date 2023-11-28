@@ -1,24 +1,24 @@
 import "./list.css";
 
-const todos = [
-  {
-    id: 1,
-    desc: "test test test",
-    done: true,
-  },
-  {
-    id: 2,
-    desc: "test test test test test test",
-    done: true,
-  },
-  {
-    id: 3,
-    desc: "test test test",
-    done: false,
-  },
-];
+// const todos = [
+//   {
+//     id: 1,
+//     desc: "test test test",
+//     done: true,
+//   },
+//   {
+//     id: 2,
+//     desc: "test test test test test test",
+//     done: true,
+//   },
+//   {
+//     id: 3,
+//     desc: "test test test",
+//     done: false,
+//   },
+// ];
 
-function List() {
+function List({todos}) {
   return (
     <div className="container">
       <div className="wrapper">

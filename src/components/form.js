@@ -1,19 +1,22 @@
 import { useState } from "react";
 import "./form.css";
 
-function Form() {
-  const [desc, setDesc] = useState('');
+function Form({addFunc}) {
+  const [desc, setDesc] = useState("");
 
   function submitHandle(e) {
     e.preventDefault();
 
-    
-    if (desc === '')
-        return;
+    if (desc === "") return;
 
-    // console.log(desc);
-    setDesc('');
+    const newTodo = { desc, done: false, id: Date.now() };
+
+    addFunc(newTodo);
+
+    // console.log(newTodo);
+    setDesc("");
   }
+
   return (
     <form onSubmit={submitHandle}>
       <div style={{ backgroundColor: "#767962" }}>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./stats.css";
 
-function Stats() {
+function Stats({clearListFunc}) {
   const [order, setOrder] = useState("Sort by input order");
 
   function submitHandle(e) {
@@ -16,7 +16,7 @@ function Stats() {
             <option value="2">Sort by</option>
             <option value="3">Sort by</option>
           </select>
-          <button type="submit" className="btn btn-delete">
+          <button onClick={clearListFunc} type="submit" className="btn btn-delete">
             Clear
           </button>
         </div>
