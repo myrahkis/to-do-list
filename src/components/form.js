@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./form.css";
 
-function Form({addFunc, deleteTodo}) {
+function Form({addFunc, onCheckedDel}) {
   const [desc, setDesc] = useState("");
 
   function submitHandle(e) {
@@ -32,9 +32,9 @@ function Form({addFunc, deleteTodo}) {
             <button type="submit" className="btn btn-add">
               Add
             </button>
-            {/* <button onClick={''} type="submit" className="btn btn-delete">
+            <button onClick={onCheckedDel} type="submit" className="btn btn-delete">
               Delete
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
