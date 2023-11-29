@@ -8,7 +8,6 @@ import Stats from './components/stats';
 function App() {
   const [list, setList] = useState([]);
 
-
   function addTodoHandle(todo) {
     setList((list) => [...list, todo]);
   }
@@ -29,8 +28,8 @@ function App() {
     <div className='cust-container'>
       <Header />
       <Form addFunc={addTodoHandle} onCheckedDel={checkedTodosHandle}/>
-      <List todos={list}  onDoneCheck={checkHandle} onCheckedDel={checkedTodosHandle}/>
-      <Stats clearListFunc={clearList} />
+      <List todos={list} onDoneCheck={checkHandle} onCheckedDel={checkedTodosHandle}/>
+      <Stats todos={list} clearListFunc={clearList} />
     </div>
   );
 }
