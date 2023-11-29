@@ -1,12 +1,12 @@
 import "./list.css";
 
-function List({ todos, deleteTodo, onDoneCheck}) {
+function List({ todos, sortedList, deleteTodo, onDoneCheck}) {
   return (
     <div className="container">
       <div className="wrapper">
         <ul className="list-group list-group-flush">
-          {todos.map((todo) => (
-            <Todo todo={todo} key={todo.id} deleteTodo={deleteTodo} onDoneCheck={onDoneCheck}/>
+          {sortedList.map((sortedList) => (
+            <Todo todo={sortedList} key={sortedList.id} deleteTodo={deleteTodo} onDoneCheck={onDoneCheck}/>
           ))}
         </ul>
       </div>
