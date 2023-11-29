@@ -56,3 +56,15 @@ input[type="checkbox"]:focus {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+.delete-btn {
+  cursor: pointer;
+  margin-left: 5px;
+  background: none;
+  border: none;
+}
+.delete-btn:hover {
+  color: rgb(179, 28, 28);
+  background: none;
+  border: none;
+}

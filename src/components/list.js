@@ -1,30 +1,13 @@
+import { useState } from "react";
 import "./list.css";
 
-// const todos = [
-//   {
-//     id: 1,
-//     desc: "test test test",
-//     done: true,
-//   },
-//   {
-//     id: 2,
-//     desc: "test test test test test test",
-//     done: true,
-//   },
-//   {
-//     id: 3,
-//     desc: "test test test",
-//     done: false,
-//   },
-// ];
-
-function List({todos}) {
+function List({ todos, deleteTodo }) {
   return (
     <div className="container">
       <div className="wrapper">
         <ul className="list-group list-group-flush">
           {todos.map((todo) => (
-            <Todo todo={todo} key={todo.id} />
+            <Todo todo={todo} key={todo.id} deleteTodo={deleteTodo}/>
           ))}
         </ul>
       </div>
@@ -32,13 +15,31 @@ function List({todos}) {
   );
 }
 
-function Todo({ todo }) {
+function Todo({ todo, deleteTodo }) {
+  // function handleCheck(todo) {
+  //   !todo.done;
+  // }
+
   return (
     <li className="list-group-item">
-      <input className="form-check-input me-1" type="checkbox"></input>
-      <span className={todo.done ? 'done-true' : ''}>
-        {todo.desc}
-      </span>
+      <input
+        className="form-check-input me-1"
+        type="checkbox"
+        onChange={() => console.log(!todo.done)}
+      ></input>
+      <span className={todo.done ? "done-true" : ""}>{todo.desc}</span>
+      <button onClick={() => deleteTodo(todo.id)} className="delete-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="13"
+          height="13"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
+      </button>
     </li>
   );
 }

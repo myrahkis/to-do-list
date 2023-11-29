@@ -32,17 +32,6 @@
     color: whitesmoke;
 }
 .btn-add:active {
-    background-color: #181e04;
-    color: whitesmoke;
-}
-
-
-.btn-delete {
-    margin-left: 10px;
-    background-color: #501e1f;
-    color: whitesmoke;
-}
-.btn-delete:hover {
-    background-color: #7e3f2e;
+    background-color: #000000;
     color: whitesmoke;
 }

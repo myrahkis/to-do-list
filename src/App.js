@@ -8,19 +8,23 @@ import Stats from './components/stats';
 function App() {
   const [list, setList] = useState([]);
 
+
   function addTodoHandle(todo) {
     setList((list) => [...list, todo]);
   }
   function clearList(list) {
     setList((list) => []);
   }
+  function deleteTodoHandle(id) {
+    setList((list) => list.filter((todo) => todo.id !== id));
+  }
 
   return (
     <div className='cust-container'>
       <Header />
-      <Form addFunc={addTodoHandle}/>
-      <List todos={list}/>
-      <Stats clearListFunc={clearList}/>
+      <Form addFunc={addTodoHandle} />
+      <List todos={list} deleteTodo={deleteTodoHandle} />
+      <Stats clearListFunc={clearList} />
     </div>
   );
 }
