@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Form from "./components/form";
 import Header from "./components/header";
@@ -6,8 +6,21 @@ import List from "./components/list";
 import Stats from "./components/stats";
 
 function App() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(function () {
+    let stored = localStorage.getItem("todos");
+
+    if (stored === null) return (stored = []);
+
+    return JSON.parse(stored);
+  });
   const [order, setOrder] = useState("input");
+
+  useEffect(
+    function () {
+      localStorage.setItem("todos", JSON.stringify(list));
+    },
+    [list]
+  );
 
   function addTodoHandle(todo) {
     setList((list) => [...list, todo]);
