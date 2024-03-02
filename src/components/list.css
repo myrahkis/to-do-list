@@ -1,3 +1,13 @@
+.container-list {
+  overflow-y: scroll;
+  grid-column: 2 / 4;
+  grid-row: 4 / 11;
+  scrollbar-color: #767962 #bfa5a4;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges;
+}
+
 .list-group {
   margin-top: 30px;
 }
@@ -7,6 +17,7 @@
   padding: 0.5rem 2rem;
   background-color: #bfa5a4;
   border-color: #897170;
+  word-break: break-all;
 }
 
 span {
@@ -39,6 +50,7 @@ input[type="checkbox"]:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* max-width: 40%; */
 }
 
 .wrapper-order {
@@ -67,4 +79,20 @@ input[type="checkbox"]:focus {
   color: rgb(179, 28, 28);
   background: none;
   border: none;
+}
+
+/* adaptability */
+
+/* Large: 992-1199px */
+@media (max-width: 1199px) {
+  .container-list {
+    grid-row: 4 / 9;
+  }
+}
+
+/* Small: 576-767px */
+@media (max-width: 767px) {
+  .container-list {
+    grid-column: 2 / 6;
+  }
 }

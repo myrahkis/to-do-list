@@ -1,12 +1,17 @@
 import "./list.css";
 
-function List({ todos, sortedList, deleteTodo, onDoneCheck}) {
+function List({ todos, sortedList, deleteTodo, onDoneCheck }) {
   return (
-    <div className="container">
+    <div className="container-list">
       <div className="wrapper">
         <ul className="list-group list-group-flush">
           {sortedList.map((sortedList) => (
-            <Todo todo={sortedList} key={sortedList.id} deleteTodo={deleteTodo} onDoneCheck={onDoneCheck}/>
+            <Todo
+              todo={sortedList}
+              key={sortedList.id}
+              deleteTodo={deleteTodo}
+              onDoneCheck={onDoneCheck}
+            />
           ))}
         </ul>
       </div>
@@ -14,14 +19,14 @@ function List({ todos, sortedList, deleteTodo, onDoneCheck}) {
   );
 }
 
-function Todo({ todo, deleteTodo, onDoneCheck}) {
-
+function Todo({ todo, deleteTodo, onDoneCheck }) {
   return (
     <li className="list-group-item">
       <input
         className="form-check-input me-1"
         type="checkbox"
         value={todo.done}
+        checked={todo.done}
         onChange={() => onDoneCheck(todo.id)}
       ></input>
       <span className={todo.done ? "done-true" : ""}>{todo.desc}</span>

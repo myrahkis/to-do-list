@@ -1,10 +1,13 @@
 header {
-    background-color: #bfa5a4;
-    padding: 20px;
+  background-color: #bfa5a4;
+  /* padding: 20px; */
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
 }
 
 h1 {
-    font-weight: 700;
-    text-align: center;
-    color: Black;
+  margin-top: 8px;
+  font-weight: 700;
+  text-align: center;
+  color: Black;
 }

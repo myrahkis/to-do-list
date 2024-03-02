@@ -1,37 +1,41 @@
+form {
+  grid-column: 1 / -1;
+}
+
 .form-control {
-    margin: 20px;
-    max-width: 350px;
-    box-shadow: none !important;
+  margin: 20px;
+  max-width: 350px;
+  box-shadow: none !important;
 }
 .form-control:focus {
-    border-color: #ced4da;
+  border-color: #ced4da;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    min-width: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
 }
 
 .btn-wrapper {
-    display: inherit;
-    align-items: center;
-    margin: 20px 0;
+  display: inherit;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .btn {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 .btn-add {
-    background-color: #283207;
-    color: whitesmoke;
+  background-color: #283207;
+  color: whitesmoke;
 }
 .btn-add:hover {
-    background-color: #4a561b;
-    color: whitesmoke;
+  background-color: #4a561b;
+  color: whitesmoke;
 }
 .btn-add:active {
-    background-color: #000000;
-    color: whitesmoke;
+  background-color: #000000;
+  color: whitesmoke;
 }

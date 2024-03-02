@@ -9,7 +9,7 @@ function Stats({ todos, order, handleSorting, clearListFunc }) {
     e.preventDefault();
   }
   return (
-    <form onSubmit={submitHandle}>
+    <form onSubmit={submitHandle} className="footer-wrap">
       <footer>
         <div className="wrapper-order">
           <select
